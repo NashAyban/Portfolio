@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">&lt; Backend Dev /&gt;</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-tag">Welcome to my portfolio</div>
+            <h1>Hi, I'm Nash Ivan A. Tenorio</h1>
+            <p class="subtitle">Aspiring Backend Developer</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Featured Project</h2>
+        <p class="section-subtitle">My projects showcasing my skills</p>
+        
+        <div class="projects-grid">
+            <a href="https://github.com/yourusername" target="_blank" style="text-decoration: none; color: inherit;">
+                <div class="project-card">
+                    <div class="project-title">Mama's Recipe</div>
+                    <div class="project-description">Mama's Recipe is a mobile app meal planning system designed to 
+                        bridge the gap between Filipino users and licensed dietitians.</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">Dart</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Authentication</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills & Technologies</h2>
+        <p class="section-subtitle">Tools and technologies I work with</p>
+        
+        <div class="skills-grid">
+            <div class="skill-box">Firebase</div>
+            <div class="skill-box">Firestore</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Flutter</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Let's Connect</h2>
+        <p class="section-subtitle">Interested in collaborations or opportunities? Reach out!</p>
+        
+        <div class="contact-links">
+            <a href="mailto:your@email.com" class="contact-link">📧 Email</a>
+            <a href="#" class="contact-link">💼 LinkedIn</a>
+            <a href="#" class="contact-link">🐙 GitHub</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nash Ivan A. Tenorio. All rights reserved. | Backend Developer</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>
