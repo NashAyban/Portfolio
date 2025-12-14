@@ -141,6 +141,57 @@ h2 {
     margin-bottom: 2rem;
 }
 
+/* About Section */
+#about {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, transparent 100%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+.education-card {
+    background: rgba(15, 52, 96, 0.5);
+    border: 1px solid #00d4ff;
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.education-title {
+    font-size: 1.3rem;
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+}
+
+.education-school {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-details {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.education-details p {
+    margin-bottom: 0.5rem;
+}
+
 /* Projects Section */
 .projects-grid {
     display: grid;
@@ -155,6 +206,7 @@ h2 {
     border-radius: 8px;
     padding: 1.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
 .project-card:hover {
@@ -166,6 +218,12 @@ h2 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     color: #00d4ff;
+}
+
+.project-date {
+    font-size: 0.9rem;
+    color: #707070;
+    margin-bottom: 0.8rem;
 }
 
 .project-description {
@@ -188,16 +246,66 @@ h2 {
     border: 1px solid rgba(0, 212, 255, 0.3);
 }
 
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s;
+    overflow-y: auto;
+}
+
+.project-modal-content {
+    max-width: 700px;
+    margin: 5% auto;
+}
+
+.modal-section {
+    margin-bottom: 2rem;
+}
+
+.modal-section h4 {
+    color: #00d4ff;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.modal-section p {
+    color: #b0b0b0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
 /* Skills Section */
 #skills {
     background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, transparent 100%);
+}
+
+.skills-categories {
+    margin-top: 2rem;
+}
+
+.skill-category {
+    margin-bottom: 2rem;
+}
+
+.category-title {
+    color: #00d4ff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
-    margin-top: 2rem;
 }
 
 .skill-box {
@@ -207,11 +315,128 @@ h2 {
     border-radius: 8px;
     text-align: center;
     transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
 }
 
 .skill-box:hover {
     background: rgba(0, 212, 255, 0.1);
     border-color: #0099ff;
+    transform: translateY(-3px);
+}
+
+.skill-box:active {
+    transform: translateY(-1px);
+}
+
+.skill-name {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+/* Skill Modal */
+.skill-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin: 10% auto;
+    padding: 2rem;
+    border: 2px solid #00d4ff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: slideDown 0.3s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    color: #00d4ff;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: #0099ff;
+}
+
+.modal-content h3 {
+    color: #00d4ff;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+.level-indicator {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.level-label {
+    color: #a0a0a0;
+    font-size: 1rem;
+}
+
+.level-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.level-beginner {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ff9800;
+    border: 1px solid #ff9800;
+}
+
+.level-intermediate {
+    background: rgba(0, 212, 255, 0.2);
+    color: #00d4ff;
+    border: 1px solid #00d4ff;
+}
+
+.level-advanced {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.modal-content p {
+    color: #b0b0b0;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Contact Section */
@@ -242,6 +467,7 @@ h2 {
 
 .contact-link:hover {
     background: rgba(0, 212, 255, 0.15);
+    transform: translateY(-2px);
 }
 
 footer {
@@ -255,6 +481,18 @@ footer {
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(26, 26, 46, 0.98);
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #00d4ff;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .menu-toggle {
@@ -269,6 +507,11 @@ footer {
         font-size: 1.8rem;
     }
 
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .projects-grid,
     .skills-grid {
         grid-template-columns: 1fr;
@@ -276,5 +519,19 @@ footer {
 
     .contact-links {
         flex-direction: column;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-modal-content {
+        margin: 10% auto;
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Nash Ivan A. Tenorio - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,13 +11,14 @@
     <nav>
         <div class="nav-container">
             <div class="logo">&lt; Backend Dev /&gt;</div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="menu-toggle">☰</button>
+            <button class="menu-toggle" id="menuToggle">☰</button>
         </div>
     </nav>
 
@@ -26,62 +27,252 @@
         <div class="hero-content">
             <div class="hero-tag">Welcome to my portfolio</div>
             <h1>Hi, I'm Nash Ivan A. Tenorio</h1>
-            <p class="subtitle">Aspiring Backend Developer</p>
+            <p class="subtitle">BSIT Student | Backend Developer</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="section-subtitle">Getting to know me</p>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm an IT student with a strong interest in backend development. I enjoy 
+                    building projects that solve real problems, even if my code isn't perfect yet. 
+                    I'm eager to learn from experienced developers and improve my skills.
+                </p>
+                <p>
+                    My journey started with basic web development and has grown to include mobile 
+                    apps using Flutter and Firebase. Each project teaches me something new, and 
+                    I'm always looking for ways to write better code.
+                </p>
+                <p>
+                    I'm seeking an OJT opportunity where I can learn industry best practices, 
+                    contribute to real projects, and grow as a developer. I'm ready to work hard, 
+                    take feedback, and level up my skills.
+                </p>
+            </div>
+            
+            <div>
+                <div class="education-card">
+                    <div class="education-title">Bachelor of Science in Information Technology Major in Business Analytics</div>
+                    <div class="education-school">Batangas State University TNEU - JPLPC Malvar</div>
+                    <div class="education-details">
+                        <p><strong>Expected Graduation:</strong> August, 2026</p>
+                        <p><strong>Current Year:</strong> 4th Year</p>
+                        <p><strong>Location:</strong> Maugat, Tanauan City, Batangas</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Featured Project</h2>
+        <h2>Featured Projects</h2>
         <p class="section-subtitle">My projects showcasing my skills</p>
         
         <div class="projects-grid">
-            <a href="https://github.com/yourusername" target="_blank" style="text-decoration: none; color: inherit;">
-                <div class="project-card">
-                    <div class="project-title">Mama's Recipe</div>
-                    <div class="project-description">Mama's Recipe is a mobile app meal planning system designed to 
-                        bridge the gap between Filipino users and licensed dietitians.</div>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Flutter</span>
-                        <span class="tech-tag">Dart</span>
-                        <span class="tech-tag">Firebase</span>
-                        <span class="tech-tag">Authentication</span>
-                    </div>
+            <div class="project-card" 
+                 data-project="mamas-recipe"
+                 data-role="Backend Developer"
+                 data-members="3"
+                 data-overview="A mobile app meal planning system designed to bridge the gap between Filipino users and licensed dietitians. Features real-time data sync and personalized meal recommendations."
+                 data-challenges="The main challenges we faced were in front-end design implementation and efficiently retrieving data from the database. Designing a user-friendly interface that could display complex nutritional information clearly took several iterations. We also struggled with optimizing our database queries to pull data efficiently without causing performance issues. Additionally, since this was our first time using Git for version control, we encountered merge conflicts when multiple team members were working on the same files, which taught us valuable lessons about proper branching and collaboration workflows.">
+                <div class="project-title">Mama's Recipe</div>
+                <div class="project-date">October 2024</div>
+                <div class="project-description">
+                    A mobile app meal planning system designed to bridge the gap between 
+                    Filipino users and licensed dietitians. Features real-time data sync 
+                    and personalized meal recommendations.
                 </div>
-            </a>
+                <div class="tech-tags">
+                    <span class="tech-tag">Flutter</span>
+                    <span class="tech-tag">Dart</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">Firestore</span>
+                </div>
+            </div>
+
+            <div class="project-card"
+                 data-project="javar-ecommerce"
+                 data-role="Backend Developer"
+                 data-members="4"
+                 data-overview="Full-stack e-commerce platform for t-shirt sales with integrated payment gateway, Google authentication, and interactive maps for delivery tracking."
+                 data-challenges="The main challenges were integrating the Maps API for accurate delivery tracking, as this was our first time working with mapping services and geolocation features. We also faced limitations with PayMongo integration since we were restricted to using their sandbox environment—we didn't have the necessary business certificates and documentation to access the full production API yet. This meant we had to work within sandbox constraints while still ensuring our payment flow was properly structured for future deployment.">
+                <div class="project-title">Javar E-Commerce</div>
+                <div class="project-date">December 2024</div>
+                <div class="project-description">
+                    Full-stack e-commerce platform for t-shirt sales with integrated payment 
+                    gateway, Google authentication, and interactive maps for delivery tracking.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PayMongo API</span>
+                    <span class="tech-tag">Google Maps API</span>
+                </div>
+            </div>
+
+            <div class="project-card"
+                 data-project="task-management"
+                 data-role="Lead Developer"
+                 data-members="6"
+                 data-overview="Desktop application for managing projects and tasks with an intuitive Windows Forms interface. Built to explore data structures and desktop application development."
+                 data-challenges="The main challenge was managing data without a backend database. We used ArrayLists to store all project and task data locally, which made storing, retrieving, and deleting data complex especially when dealing with nested task structures. Ensuring data persistence and handling updates without losing information required careful implementation. Additionally, since we weren't yet fully comfortable with Object-Oriented Programming principles, designing the component functions and managing relationships between different classes was particularly challenging. This project significantly improved our understanding of data structures and OOP concepts.">
+                <div class="project-title">Task Management System</div>
+                <div class="project-date">July 2024</div>
+                <div class="project-description">
+                    Desktop application for managing projects and tasks with an intuitive 
+                    Windows Forms interface. Built to explore data structures and desktop 
+                    application development.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">Windows Forms</span>
+                </div>
+            </div>
+
+            <div class="project-card"
+                 data-project="jf-fitness"
+                 data-role="Full Stack Developer"
+                 data-members="5"
+                 data-overview="Web-based gym management platform for streamlining operations, member registration, and class scheduling with a modern, responsive interface."
+                 data-challenges="Our primary challenges involved implementing Google Sign-In authentication and building a functional reservation management system. The booking logic for managing gym class reservations wasn't as refined as intended, and generating properly formatted receipts for transactions also proved difficult. Despite these limitations, we successfully created a working system that handled basic booking functionality.">
+                <div class="project-title">JF Fitness Gym</div>
+                <div class="project-date">May 2024</div>
+                <div class="project-description">
+                    Web-based gym management platform for streamlining operations, member 
+                    registration, and class scheduling with a modern, responsive interface.
+                </div>
+                <div class="tech-tags">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML/CSS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Detail Modal -->
+        <div id="projectModal" class="project-modal">
+            <div class="modal-content project-modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 id="modalProjectName"></h3>
+                
+                <div class="modal-section">
+                    <h4>Project Overview</h4>
+                    <p id="modalProjectOverview"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>My Role</h4>
+                    <p id="modalProjectRole"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Team Size</h4>
+                    <p id="modalProjectMembers"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Challenges Faced</h4>
+                    <p id="modalProjectChallenges"></p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills & Technologies</h2>
-        <p class="section-subtitle">Tools and technologies I work with</p>
+        <p class="section-subtitle">Click on any skill to see my expertise level</p>
         
-        <div class="skills-grid">
-            <div class="skill-box">Firebase</div>
-            <div class="skill-box">Firestore</div>
-            <div class="skill-box">HTML</div>
-            <div class="skill-box">CSS</div>
-            <div class="skill-box">JavaScript</div>
-            <div class="skill-box">Flutter</div>
+        <div class="skills-categories">
+            <div class="skill-category">
+                <div class="category-title">Languages</div>
+                <div class="skills-grid">
+                    <div class="skill-box" data-level="intermediate" data-description="Used in multiple projects including Javar E-Commerce and JF Fitness Gym">
+                        <div class="skill-name">PHP</div>
+                    </div>
+                    <div class="skill-box" data-level="intermediate" data-description="Mobile app development with Flutter framework">
+                        <div class="skill-name">Dart</div>
+                    </div>
+                    <div class="skill-box" data-level="intermediate" data-description="Front-end interactions and API integrations">
+                        <div class="skill-name">JavaScript</div>
+                    </div>
+                    <div class="skill-box" data-level="beginner" data-description="Currently learning, used in academic projects">
+                        <div class="skill-name">Python</div>
+                    </div>
+                    <div class="skill-box" data-level="beginner" data-description="Basic knowledge from coursework">
+                        <div class="skill-name">Java</div>
+                    </div>
+                    <div class="skill-box" data-level="beginner" data-description="Desktop application development">
+                        <div class="skill-name">C#</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="category-title">Frameworks & Tools</div>
+                <div class="skills-grid">
+                    <div class="skill-box" data-level="intermediate" data-description="Built complete mobile app (Mama's Recipe) with Flutter">
+                        <div class="skill-name">Flutter</div>
+                    </div>
+                    <div class="skill-box" data-level="intermediate" data-description="Backend services, authentication, and real-time database">
+                        <div class="skill-name">Firebase</div>
+                    </div>
+                    <div class="skill-box" data-level="intermediate" data-description="Front-end development and responsive design">
+                        <div class="skill-name">HTML/CSS</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="category-title">Databases</div>
+                <div class="skills-grid">
+                    <div class="skill-box" data-level="intermediate" data-description="Used in web projects with CRUD operations">
+                        <div class="skill-name">MySQL</div>
+                    </div>
+                    <div class="skill-box" data-level="intermediate" data-description="NoSQL database for mobile app backend">
+                        <div class="skill-name">Firestore</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skill Detail Modal -->
+        <div id="skillModal" class="skill-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3 id="modalSkillName"></h3>
+                <div class="level-indicator">
+                    <span class="level-label">Expertise Level:</span>
+                    <span id="modalSkillLevel" class="level-badge"></span>
+                </div>
+                <p id="modalSkillDescription"></p>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Let's Connect</h2>
-        <p class="section-subtitle">Interested in collaborations or opportunities? Reach out!</p>
+        <p class="section-subtitle">Open to OJT opportunities and collaborations</p>
         
         <div class="contact-links">
-            <a href="mailto:your@email.com" class="contact-link">📧 Email</a>
-            <a href="#" class="contact-link">💼 LinkedIn</a>
-            <a href="#" class="contact-link">🐙 GitHub</a>
+            <a href="mailto:nashivantenorio28@gmail.com" class="contact-link">📧 Email</a>
+            <a href="https://www.linkedin.com/in/nash-ivan-tenorio-796a77392/" target="_blank" class="contact-link">💼 LinkedIn</a>
+            <a href="https://github.com/NashAyban" target="_blank" class="contact-link">🐙 GitHub</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Nash Ivan A. Tenorio. All rights reserved. | Backend Developer</p>
+        <p>&copy; 2024 Nash Ivan A. Tenorio. All rights reserved.</p>
     </footer>
 
     <script>
@@ -95,14 +286,100 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    
+                    // Close mobile menu after clicking
+                    const navLinks = document.getElementById('navLinks');
+                    navLinks.classList.remove('active');
                 }
             });
         });
 
         // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        });
+
+        // ===== PROJECT MODAL FUNCTIONALITY =====
+        const projectModal = document.getElementById('projectModal');
+        const modalProjectName = document.getElementById('modalProjectName');
+        const modalProjectOverview = document.getElementById('modalProjectOverview');
+        const modalProjectRole = document.getElementById('modalProjectRole');
+        const modalProjectMembers = document.getElementById('modalProjectMembers');
+        const modalProjectChallenges = document.getElementById('modalProjectChallenges');
+
+        // Add click event to all project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const projectName = this.querySelector('.project-title').textContent;
+                const role = this.getAttribute('data-role');
+                const members = this.getAttribute('data-members');
+                const overview = this.getAttribute('data-overview');
+                const challenges = this.getAttribute('data-challenges');
+
+                modalProjectName.textContent = projectName;
+                modalProjectOverview.textContent = overview;
+                modalProjectRole.textContent = role;
+                modalProjectMembers.textContent = `${members} ${members === '1' ? 'member' : 'members'} (${members === '1' ? 'Solo Project' : 'Team Project'})`;
+                modalProjectChallenges.textContent = challenges;
+
+                projectModal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // ===== SKILL MODAL FUNCTIONALITY =====
+        const skillModal = document.getElementById('skillModal');
+        const modalSkillName = document.getElementById('modalSkillName');
+        const modalSkillLevel = document.getElementById('modalSkillLevel');
+        const modalSkillDescription = document.getElementById('modalSkillDescription');
+
+        // Add click event to all skill boxes
+        document.querySelectorAll('.skill-box').forEach(box => {
+            box.addEventListener('click', function() {
+                const skillName = this.querySelector('.skill-name').textContent;
+                const level = this.getAttribute('data-level');
+                const description = this.getAttribute('data-description');
+
+                modalSkillName.textContent = skillName;
+                modalSkillLevel.textContent = level.charAt(0).toUpperCase() + level.slice(1);
+                modalSkillLevel.className = 'level-badge level-' + level;
+                modalSkillDescription.textContent = description;
+
+                skillModal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            });
+        });
+
+        // ===== CLOSE MODAL FUNCTIONALITY =====
+        // Close modal when clicking X button
+        document.querySelectorAll('.close-modal').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                projectModal.style.display = 'none';
+                skillModal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === projectModal) {
+                projectModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            if (e.target === skillModal) {
+                skillModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                projectModal.style.display = 'none';
+                skillModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
         });
     </script>
 </body>
